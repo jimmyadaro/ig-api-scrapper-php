@@ -32,7 +32,7 @@ You can install _instagram-basic-display-php_ using [Composer](https://getcompos
 
 #### "Instagram User Token"?
 
-**We assume you already have an "Instagram User Token"**, if you don't have one and don't know where find it, you can follow [this tutorial](https://github.com/jimmyadaro/ig-api-scrapper-php/wiki/How-to-get-the-Instagram-User-Token) from the project's Wiki page.
+**We assume you already have an "Instagram User Token"**, if you don't have one and don't know where to find it, you can follow [this tutorial](https://github.com/jimmyadaro/ig-api-scrapper-php/wiki/How-to-get-the-Instagram-User-Token) from the project's Wiki page.
 
 ---
 
@@ -40,17 +40,17 @@ You can install _instagram-basic-display-php_ using [Composer](https://getcompos
 
 ## How it works
 
-This script will connect to your Instagram account using the Instagram User Token, get the last _n_ posts (read "_Configuration_"), check if the last one is already inside the "dist" folder (read "_Installation_") and if it is no there will download the last _n_ posts in the "tmp" folder, and then replace the "dist" folder content –erasing everything inside that directory!– with the new content from "tmp".
+This script will connect to your Instagram account using the Instagram User Token, get the last _n_ posts (read "_Configuration_"), check if the last one is already inside the "dist" folder (read "_Installation_"), if it is no there it will download the last _n_ posts in the "tmp" folder, and finally replace the "dist" folder content –erasing everything inside that directory!– with the new content from "tmp" –erasing everything inside that directory!–.
 
 This way we provide **near-zero downtime**, which may vary depending on how fast your system is for moving files from one folder to another (which usually is a quite light task).
 
-The downloaded images have this format: `<POST_NUMBER>-<URL_CODE>-.jpg` So, if you download your last 6 posts, the last file will be named something like: `6-abc123.jpg` We include a **simple example** of how to get this posts and their URL in the `index.php` file of this repository, which will be **empty until you execute the script** provided in the section "_Try it_" of this document.
+The downloaded images have this format: `<POST_NUMBER>-<URL_CODE>-.jpg` So, if you download your last 6 posts, the last file will be named something like: `6-abc123.jpg` We include a **simple example** of how to get this posts and their URLs in the `index.php` file, which will be **empty until you execute the script** provided in the section "_Try it_" of this document.
 
 ## Installation
 
 You just need to place both `ig-cronjob.php` and `ig-cronjob.ini` in your project's root folder.
 
-Then you should create the required folder structure:
+Then create the required folder structure:
 
 ```
 your-site/
@@ -83,13 +83,13 @@ $ cp /path/to/ig-api-scrapper-php/ig-cronjob-sample.ini /path/to/ig-api-scrapper
 $ mv /path/to/ig-api-scrapper-php/ig-cronjob-sample.ini /path/to/ig-api-scrapper-php/ig-cronjob.ini
 ```
 
-In that `ig-cronjob.ini` file you should add your token to `fb_app_token` and set the number of photos you want to get in `post_to_get` (both inside the quotation marks).
+In that `ig-cronjob.ini` file you should add your token to `instagram_user_token` and set the number of photos you want to get in `post_to_get` (both inside the quotation marks).
 
 **Example:**
 
 ```
 [config]
-fb_app_token = "abc123"
+instagram_user_token = "abc123"
 post_to_get = "3"
 ```
 
@@ -170,7 +170,25 @@ If you need to edit how often this cronjob is called, I recommend [Crontab Guru]
 
 ## To-do
 
+- Check if IUT is valid
 - Improve log system for main execution file
 - Extend access to more API data, such as "captions" and "timestamp"
 - Make it object-oriented
 - Check for errors and return Exceptions
+
+
+# Changelog
+
+## [1.1](https://github.com/jimmyadaro/ig-api-scrapper-php/tree/1.1) (2020-06-20)
+
+### Features
+
+- Update Instagram User Token variable in main config file
+- Update Instagram User Token variable in main execution file
+- Add changelog to `README.md`
+
+## [1.0](https://github.com/jimmyadaro/ig-api-scrapper-php/tree/1.0) (2020-06-19)
+
+### Features
+
+- First version public available.
