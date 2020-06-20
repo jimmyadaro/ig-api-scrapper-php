@@ -22,7 +22,7 @@ if (!file_exists($config_file)) {
 // Get configuration data
 $config = parse_ini_file($config_file,true,INI_SCANNER_RAW);
 $numer_of_posts_to_get = $config["config"]["post_to_get"];
-$ig_test_user_token = $config["config"]["fb_app_token"];
+$instagram_user_token = $config["config"]["instagram_user_token"];
 
 // Define "tmp" directory
 $tmp_foldername_path = __DIR__."/assets/ig/tmp";
@@ -48,11 +48,11 @@ function log_date() {
 // ----------------------
 
 // Instance "InstagramBasicDisplay" using the user's token
-$instagram = new InstagramBasicDisplay($ig_test_user_token);
+$instagram = new InstagramBasicDisplay($instagram_user_token);
 
 // Access to Instagram using access token
 // "The total number of calls your app can make per hour is 240 times the number of users"
-$instagram->setAccessToken($ig_test_user_token);
+$instagram->setAccessToken($instagram_user_token);
 
 // Get user's media, second parameter is how many media data we want (max 99)
 // See: @link https://github.com/espresso-dev/instagram-basic-display-php#pagination
