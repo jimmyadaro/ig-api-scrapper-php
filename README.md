@@ -1,5 +1,7 @@
 # IG API Scrapper PHP
 
+![Demo](https://i.imgur.com/TxuIe16.gif)
+
 ## Description
 
 Get the last _n_ posts from your Instagram account and download them into your server, so you don't need to call the API every time a user requests the page, and call a local file instead.
