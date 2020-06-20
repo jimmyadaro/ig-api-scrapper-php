@@ -104,8 +104,8 @@ If you use Apache you can set it like this:
 ```
 # Inside your .htaccess file
 <FilesMatch "\.(ini|log)$|(\.*~)$">
-	Order Allow,Deny
-	Deny from all
+  Order Allow,Deny
+  Deny from all
 </FilesMatch>
 ```
 
@@ -114,8 +114,8 @@ If you use nginx you can set it like this:
 ```
 # Inside your nginx config
 location ~* (\.ini|\.log)$ {
-	deny all;
-	error_page 403 =404 / ;
+  deny all;
+  error_page 403 =404 / ;
 }
 ```
 
@@ -169,6 +169,6 @@ If you need to edit how often this cronjob is called, I recommend [Crontab Guru]
 ## To-do
 
 - Improve log system for main execution file
-- Extend access to more API data, such as "captions" and "timestamp".
+- Extend access to more API data, such as "captions" and "timestamp"
 - Make it object-oriented
 - Check for errors and return Exceptions
