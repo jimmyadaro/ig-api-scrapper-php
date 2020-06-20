@@ -179,7 +179,7 @@ If you need to edit how often this cronjob is called, I recommend [Crontab Guru]
 
 # Changelog
 
-## [1.1](https://github.com/jimmyadaro/ig-api-scrapper-php/tree/1.1) (2020-06-20)
+## [1.1](https://github.com/jimmyadaro/ig-api-scrapper-php/releases/tag/1.1) (2020-06-20)
 
 ### Features
 
@@ -187,7 +187,7 @@ If you need to edit how often this cronjob is called, I recommend [Crontab Guru]
 - Update Instagram User Token variable in main execution file
 - Add changelog to `README.md`
 
-## [1.0](https://github.com/jimmyadaro/ig-api-scrapper-php/tree/1.0) (2020-06-19)
+## [1.0](https://github.com/jimmyadaro/ig-api-scrapper-php/releases/tag/1.0) (2020-06-19)
 
 ### Features
 
