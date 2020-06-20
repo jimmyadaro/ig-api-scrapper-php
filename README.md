@@ -1,6 +1,6 @@
 # IG API Scrapper PHP
 
-![Demo](/demo.gif)
+![Demo GIF](/demo-compressed.gif)
 
 ## Description
 
