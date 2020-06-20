@@ -1,6 +1,6 @@
 # IG API Scrapper PHP
 
-![Demo](https://i.imgur.com/TxuIe16.gif)
+![Demo](/demo.gif)
 
 ## Description
 
