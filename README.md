@@ -132,14 +132,14 @@ $ /path/to/php /path/to/ig-api-scrapper-php/ig-cronjob.php >> /path/to/ig-api-sc
 The `cron.log` file will be something like this:
 
 ```html/text
-[2020-06-19T04:20:10-04:00] [INFO] Starting download...
-[2020-06-19T04:20:11-04:00] [INFO] Downloaded post #1: 1-B9wLmirAyhi.jpg
-[2020-06-19T04:20:11-04:00] [INFO] Downloaded post #2: 2-B9kSpuugyFq.jpg
-[2020-06-19T04:20:11-04:00] [INFO] Downloaded post #3: 3-B9e0E7iAMGh.jpg
-[2020-06-19T04:20:12-04:00] [INFO] Downloaded post #4: 4-B9Z49MKAQD9.jpg
-[2020-06-19T04:20:12-04:00] [INFO] Downloaded post #5: 5-B9JvSOxAYPl.jpg
-[2020-06-19T04:20:12-04:00] [INFO] Downloaded post #6: 6-B82p3t3gAtR.jpg
-[2020-06-19T04:20:12-04:00] [OK] Successfully downloaded last 6 posts
+[2020-06-19T04:20:10-03:00] [INFO] Starting download...
+[2020-06-19T04:20:11-03:00] [INFO] Downloaded post #1: 1-B9wLmirAyhi.jpg
+[2020-06-19T04:20:11-03:00] [INFO] Downloaded post #2: 2-B9kSpuugyFq.jpg
+[2020-06-19T04:20:11-03:00] [INFO] Downloaded post #3: 3-B9e0E7iAMGh.jpg
+[2020-06-19T04:20:12-03:00] [INFO] Downloaded post #4: 4-B9Z49MKAQD9.jpg
+[2020-06-19T04:20:12-03:00] [INFO] Downloaded post #5: 5-B9JvSOxAYPl.jpg
+[2020-06-19T04:20:12-03:00] [INFO] Downloaded post #6: 6-B82p3t3gAtR.jpg
+[2020-06-19T04:20:12-03:00] [OK] Successfully downloaded last 6 posts
 ```
 
 #### Possible errors:
@@ -147,7 +147,7 @@ The `cron.log` file will be something like this:
 - The config file (`ig-cronjob.ini`) was not found or is not accessible by PHP. It is expected to be found in the same root folder as the `ig-cronjob.php` file.
 
 ```html/text
-[2020-06-19T04:20:05-04:00] [ERROR] Config file was not found, execution failed
+[2020-06-19T04:20:05-03:00] [ERROR] Config file was not found, execution failed
 ```
 
 ## Cronjob & API's rate limits (quota)
